@@ -14,7 +14,7 @@
 [data-theme="dark"] {
   --bg0:#060810; --bg1:#0d1020; --bg2:#131726; --bg3:#1a1f30; --bg4:#20263a;
   --border:#252d45; --border2:#1a2035;
-  --text0:#e8eaf6; --text1:#9ba3c0; --text2:#5a6380; --text3:#2e3550;
+  --text0:#f0f2ff; --text1:#c4cce8; --text2:#8892b5; --text3:#4a5478;
   --topbar-bg:rgba(13,16,32,.92);
   --eq-bg:#0d1020; --eq-grid:#1a2035;
   --chart-bg:rgba(13,16,32,0); --chart-tooltip-bg:#0d1020;
@@ -23,7 +23,7 @@
 [data-theme="light"] {
   --bg0:#eef1f8; --bg1:#ffffff; --bg2:#f7f8fc; --bg3:#edf0f7; --bg4:#e1e6f2;
   --border:#d0d8ec; --border2:#e0e6f4;
-  --text0:#1a1f35; --text1:#4a5270; --text2:#8a96b8; --text3:#bcc4dc;
+  --text0:#0e1228; --text1:#2e3a5c; --text2:#5a6890; --text3:#9ba8c8;
   --topbar-bg:rgba(255,255,255,.95);
   --eq-bg:#f7f8fc; --eq-grid:#dce2f0;
   --chart-bg:rgba(247,248,252,0); --chart-tooltip-bg:#ffffff;
@@ -151,12 +151,12 @@ body::before{
 .kpi.c-cyan::before  {background:linear-gradient(90deg,var(--cyan),transparent)}
 .kpi.c-red::before   {background:linear-gradient(90deg,var(--red),transparent)}
 .kpi.c-purple::before{background:linear-gradient(90deg,var(--purple),transparent)}
-.kpi-lbl{font-family:var(--mono);font-size:clamp(7.5px,.6vw,9px);letter-spacing:.12em;color:var(--text2);text-transform:uppercase;margin-bottom:7px}
-.kpi-val{font-family:var(--display);font-size:clamp(18px,1.8vw,25px);line-height:1;letter-spacing:.02em;color:var(--text0)}
+.kpi-lbl{font-family:var(--mono);font-size:clamp(8px,.65vw,9.5px);letter-spacing:.12em;color:var(--text1);text-transform:uppercase;margin-bottom:7px}
+.kpi-val{font-family:var(--display);font-size:clamp(20px,2vw,27px);line-height:1;letter-spacing:.02em;color:var(--text0)}
 .kpi-val.pos{color:var(--green)}.kpi-val.neg{color:var(--red)}
 .kpi-val.blue{color:var(--accent)}.kpi-val.gold{color:var(--gold)}
 .kpi-val.cyan{color:var(--cyan)}.kpi-val.purple{color:var(--purple)}
-.kpi-sub{margin-top:4px;font-family:var(--mono);font-size:clamp(8px,.65vw,9.5px);color:var(--text2)}
+.kpi-sub{margin-top:4px;font-family:var(--mono);font-size:clamp(9px,.7vw,10.5px);color:var(--text1)}
 
 /* ── Content Grid ── */
 .content-grid{display:grid;grid-template-columns:min(300px,35vw) 1fr;gap:clamp(8px,1vw,12px);align-items:start}
@@ -174,7 +174,7 @@ body::before{
   background:var(--bg1);transition:background .3s,border-color .3s;
 }
 .card-title{
-  font-family:var(--mono);font-size:10px;font-weight:700;
+  font-family:var(--mono);font-size:11px;font-weight:700;
   color:var(--accent);letter-spacing:.12em;text-transform:uppercase;
   display:flex;align-items:center;gap:7px;
 }
@@ -190,14 +190,14 @@ body::before{
 .drow{
   display:flex;align-items:center;justify-content:space-between;
   padding:clamp(6px,.6vw,8px) clamp(12px,1vw,15px);
-  font-family:var(--mono);font-size:clamp(10px,.85vw,11px);
+  font-family:var(--mono);font-size:clamp(10.5px,.9vw,12px);
   min-height:30px;border-bottom:1px solid var(--border2);
   transition:background .1s;gap:8px;
 }
 .drow:last-child{border-bottom:none}
 .drow:hover{background:var(--bg3)}
-.drow .lbl{color:var(--text1);flex-shrink:0}
-.drow .val{font-weight:600;text-align:right;word-break:break-all}
+.drow .lbl{color:var(--text1);flex-shrink:0;font-size:clamp(10px,.85vw,11.5px)}
+.drow .val{font-weight:700;text-align:right;word-break:break-all;font-size:clamp(10.5px,.9vw,12px)}
 .drow .val.g{color:var(--green)}.drow .val.r{color:var(--red)}
 .drow .val.b{color:var(--accent)}.drow .val.c{color:var(--cyan)}
 .drow .val.gold{color:var(--gold)}.drow .val.d{color:var(--text2);font-weight:400}
@@ -224,10 +224,10 @@ body::before{
 .ch-wrap{position:relative;width:100%;max-width:100%;overflow:hidden}
 .cc-hdr{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px;gap:10px}
 .cc-title{
-  font-family:var(--mono);font-size:10px;letter-spacing:.14em;
-  color:var(--text2);text-transform:uppercase;font-weight:600;
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  color:var(--text1);text-transform:uppercase;font-weight:600;
 }
-.cc-hint{font-family:var(--mono);font-size:9px;color:var(--text3);margin-top:3px;letter-spacing:.06em}
+.cc-hint{font-family:var(--mono);font-size:9.5px;color:var(--text2);margin-top:3px;letter-spacing:.06em}
 .cc-date{font-family:var(--mono);font-size:9px;color:var(--text2);margin-top:3px}
 .cc-right{text-align:right;flex-shrink:0}
 .cc-val{font-family:var(--display);font-size:clamp(16px,1.5vw,21px);letter-spacing:.02em;line-height:1;color:var(--text0)}
@@ -270,19 +270,19 @@ body::before{
 }
 .tr-dir{
   font-family:var(--mono);
-  font-size:clamp(11px,.95vw,13px);
+  font-size:clamp(12px,1vw,14px);
   font-weight:700;color:var(--text0);
   white-space:nowrap;
 }
 .tr-meta{
   font-family:var(--mono);
-  font-size:clamp(8.5px,.7vw,10px);
-  color:var(--text2);
+  font-size:clamp(9px,.75vw,11px);
+  color:var(--text1);
   white-space:nowrap;
 }
 .tr-pnl{
   font-family:var(--mono);
-  font-size:clamp(11px,.95vw,14px);
+  font-size:clamp(12px,1vw,15px);
   font-weight:700;
   text-align:right;
   white-space:nowrap;flex-shrink:0;
@@ -1854,10 +1854,10 @@ footer {
 /* KPI label: DM Mono premium spacing */
 .kpi-lbl {
   font-family: 'DM Mono', var(--mono) !important;
-  font-size: 9px !important;
+  font-size: 9.5px !important;
   letter-spacing: .22em !important;
   color: var(--premium-silver) !important;
-  opacity: .7;
+  opacity: .9;
   margin-bottom: 10px !important;
 }
 
@@ -1920,10 +1920,10 @@ footer {
 
 .card-title {
   font-family: 'DM Mono', var(--mono) !important;
-  font-size: 10px !important;
-  font-weight: 500 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
   letter-spacing: .18em !important;
-  color: rgba(100,140,220,.9) !important;
+  color: rgba(120,170,255,.95) !important;
 }
 
 .ct-icon {
@@ -1958,7 +1958,7 @@ footer {
   background: rgba(255,255,255,.016) !important;
 }
 .drow .lbl {
-  color: rgba(155,163,192,.75) !important;
+  color: rgba(196,204,232,.85) !important;
   font-size: 10.5px !important;
 }
 .drow .val {
@@ -1990,10 +1990,10 @@ footer {
 }
 .cc-title {
   font-family: 'DM Mono', var(--mono) !important;
-  font-size: 10px !important;
+  font-size: 11px !important;
   letter-spacing: .22em !important;
-  color: rgba(140,160,210,.75) !important;
-  font-weight: 400 !important;
+  color: rgba(180,200,240,.9) !important;
+  font-weight: 500 !important;
 }
 .cc-val {
   font-family: 'Syne', var(--display), sans-serif !important;
@@ -2508,6 +2508,177 @@ footer a:hover { color: var(--cyan) !important; }
 
 /* ── Charts 3-col grid ── */
 .charts-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:start}
+
+/* ══ DAILY P&L CALENDAR ══ */
+.daily-view-toggle{
+  display:flex;gap:3px;background:var(--bg4);
+  border:1px solid var(--border);border-radius:6px;padding:2px;
+  flex-shrink:0;
+}
+.dvt-btn{
+  font-family:'DM Mono',var(--mono);font-size:9px;letter-spacing:.08em;
+  padding:3px 10px;border:none;border-radius:4px;
+  cursor:pointer;transition:all .15s;background:none;color:var(--text2);
+}
+.dvt-btn.active{background:var(--accent);color:#fff;box-shadow:0 0 10px rgba(77,142,240,.3)}
+.dvt-btn:not(.active):hover{color:var(--text0)}
+
+/* Month navigator */
+.cal-nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:6px 2px 8px;gap:8px;
+}
+.cal-nav-btn{
+  width:26px;height:26px;border-radius:5px;
+  border:1px solid var(--border);background:var(--bg3);
+  color:var(--text1);cursor:pointer;
+  display:grid;place-items:center;font-size:13px;
+  transition:all .15s;flex-shrink:0;
+}
+.cal-nav-btn:hover{border-color:var(--accent);color:var(--accent)}
+.cal-nav-btn:disabled{opacity:.25;cursor:default;pointer-events:none}
+.cal-nav-center{
+  display:flex;flex-direction:column;align-items:center;gap:2px;flex:1;
+}
+.cal-nav-month{
+  font-family:'DM Mono',var(--mono);font-size:12px;
+  font-weight:700;color:var(--text0);letter-spacing:.06em;
+}
+.cal-nav-pnl{
+  font-family:'DM Mono',var(--mono);font-size:9.5px;
+  font-weight:600;padding:1px 8px;border-radius:3px;
+}
+.cal-nav-pnl.pos{color:var(--green);background:rgba(0,232,122,.12)}
+.cal-nav-pnl.neg{color:var(--red);background:rgba(255,71,87,.12)}
+.cal-nav-pnl.zero{color:var(--text2);background:var(--bg4)}
+
+/* Calendar grid */
+.cal-week-header{
+  display:grid;grid-template-columns:repeat(7,1fr);
+  gap:2px;margin-bottom:2px;
+}
+.cal-dow{
+  font-family:'DM Mono',var(--mono);font-size:9px;
+  color:var(--text1);text-align:center;letter-spacing:.05em;
+  padding:3px 0;font-weight:700;text-transform:uppercase;
+}
+/* Color each day of week distinctly */
+.cal-dow:nth-child(1){color:#ff8fab}  /* Sun - pink */
+.cal-dow:nth-child(2){color:#74c0fc}  /* Mon - blue */
+.cal-dow:nth-child(3){color:#a9e34b}  /* Tue - green */
+.cal-dow:nth-child(4){color:#ffd43b}  /* Wed - yellow */
+.cal-dow:nth-child(5){color:#63e6be}  /* Thu - teal */
+.cal-dow:nth-child(6){color:#da77f2}  /* Fri - purple */
+.cal-dow:nth-child(7){color:#ff8fab}  /* Sat - pink */
+.cal-grid{
+  display:grid;grid-template-columns:repeat(7,1fr);
+  gap:2px;
+}
+.cal-cell{
+  border-radius:4px;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  cursor:default;position:relative;
+  transition:transform .12s,box-shadow .12s;
+  min-width:0;overflow:hidden;
+  font-family:'DM Mono',var(--mono);
+  border:1px solid transparent;
+  padding:4px 2px;
+  min-height:36px;
+}
+.cal-cell:not(.empty):not(.no-trade):hover{
+  transform:scale(1.06);z-index:10;
+  box-shadow:0 3px 14px rgba(0,0,0,.5);
+}
+.cal-cell.empty{background:transparent;pointer-events:none;min-height:36px}
+.cal-cell.no-trade{
+  background:rgba(255,255,255,.025);border-color:rgba(255,255,255,.05);
+}
+.cal-cell.weekend-empty{
+  background:transparent;border-color:transparent;pointer-events:none;opacity:.15;
+}
+.cal-cell.pos{background:rgba(0,232,122,.13);border-color:rgba(0,232,122,.28)}
+.cal-cell.pos.strong{background:rgba(0,232,122,.27);border-color:rgba(0,232,122,.48);box-shadow:0 0 5px rgba(0,232,122,.14)}
+.cal-cell.pos.very-strong{background:rgba(0,232,122,.44);border-color:rgba(0,232,122,.68);box-shadow:0 0 8px rgba(0,232,122,.24)}
+.cal-cell.neg{background:rgba(255,71,87,.11);border-color:rgba(255,71,87,.24)}
+.cal-cell.neg.strong{background:rgba(255,71,87,.24);border-color:rgba(255,71,87,.44);box-shadow:0 0 5px rgba(255,71,87,.12)}
+.cal-cell.neg.very-strong{background:rgba(255,71,87,.4);border-color:rgba(255,71,87,.64);box-shadow:0 0 8px rgba(255,71,87,.2)}
+
+.cal-day-num{
+  font-size:9.5px;
+  color:var(--text0);line-height:1;font-weight:700;
+}
+.cal-cell.pos .cal-day-num{color:#b0ffd8}
+.cal-cell.neg .cal-day-num{color:#ffb3bb}
+.cal-cell.no-trade .cal-day-num{color:var(--text1);opacity:.7}
+.cal-cell-pnl{
+  font-size:8px;
+  line-height:1;margin-top:2px;
+  font-weight:800;white-space:nowrap;
+  letter-spacing:.01em;
+}
+.cal-cell.pos .cal-cell-pnl{color:#00ff8a}
+.cal-cell.neg .cal-cell-pnl{color:#ff5566}
+.cal-cell-trades{
+  font-size:6.5px;
+  line-height:1;margin-top:1px;
+  font-weight:600;white-space:nowrap;
+  opacity:.9;
+  letter-spacing:.02em;
+}
+.cal-cell.pos .cal-cell-trades{color:#7dffc4}
+.cal-cell.neg .cal-cell-trades{color:#ffaaaa}
+.cal-cell.no-trade .cal-cell-trades{color:var(--text2)}
+/* Light mode overrides */
+[data-theme="light"] .cal-cell.pos .cal-day-num{color:#006633}
+[data-theme="light"] .cal-cell.neg .cal-day-num{color:#8b0000}
+[data-theme="light"] .cal-cell.no-trade .cal-day-num{color:var(--text1)}
+[data-theme="light"] .cal-cell.pos .cal-cell-pnl{color:#007a40}
+[data-theme="light"] .cal-cell.neg .cal-cell-pnl{color:#cc1122}
+[data-theme="light"] .cal-cell.pos .cal-cell-trades{color:#007a40}
+[data-theme="light"] .cal-cell.neg .cal-cell-trades{color:#cc1122}
+
+/* Stats row below calendar */
+.cal-stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:4px;margin-top:8px;
+}
+.cal-stat{
+  background:var(--bg3);border:1px solid var(--border2);
+  border-radius:5px;padding:5px 6px;text-align:center;
+}
+.cal-stat-lbl{font-family:'DM Mono',var(--mono);font-size:8.5px;color:var(--text1);letter-spacing:.08em;margin-bottom:2px}
+.cal-stat-val{font-family:'DM Mono',var(--mono);font-size:11px;font-weight:700;color:var(--text0)}
+.cal-stat-val.pos{color:var(--green)}.cal-stat-val.neg{color:var(--red)}
+
+/* Tooltip */
+.cal-tooltip{
+  position:fixed;z-index:9999;
+  background:var(--bg1);border:1px solid var(--border);
+  border-radius:8px;padding:9px 13px;
+  font-family:'DM Mono',var(--mono);font-size:11px;
+  color:var(--text0);pointer-events:none;
+  box-shadow:0 8px 32px rgba(0,0,0,.5);
+  min-width:155px;display:none;
+}
+.cal-tt-date{font-size:9.5px;color:var(--text2);letter-spacing:.1em;margin-bottom:5px}
+.cal-tt-row{display:flex;justify-content:space-between;gap:12px;margin-top:3px}
+.cal-tt-lbl{color:var(--text2);font-size:9px}
+.cal-tt-val{font-weight:600;font-size:10px}
+.cal-tt-val.pos{color:var(--green)}.cal-tt-val.neg{color:var(--red)}
+
+/* Legend */
+.cal-legend{
+  display:flex;align-items:center;gap:8px;
+  margin-top:7px;flex-wrap:wrap;
+}
+.cal-legend-item{display:flex;align-items:center;gap:3px;font-family:'DM Mono',var(--mono);font-size:8px;color:var(--text2)}
+.cal-legend-box{width:9px;height:9px;border-radius:2px;border:1px solid transparent}
+
+@media(max-width:680px){
+  .cal-cell{border-radius:3px}
+  .cal-stats{grid-template-columns:repeat(2,1fr)}
+}
 .ch-weekly { height: 115px; }
 @media(max-width:1100px){.charts-3col{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){.charts-3col{grid-template-columns:1fr !important}}
@@ -2552,6 +2723,7 @@ footer a:hover { color: var(--cyan) !important; }
     </div>
     <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="切換日夜模式">🌙</button>
     <button class="screenshot-btn" id="screenshot-btn" onclick="takeScreenshot()" title="截圖複製績效">📸</button>
+    <button class="screenshot-btn" id="mobile-screenshot-btn" onclick="takeMobileScreenshot()" title="手機截圖（損益曲線、日曆、成交、今日損益）" style="font-size:12px">📱</button>
   </div>
 </header>
 <div id="ss-toast"></div>
@@ -2679,15 +2851,61 @@ footer a:hover { color: var(--cyan) !important; }
         </div>
 
         <!-- 每日損益 -->
-        <div class="chart-card">
+        <div class="chart-card" id="daily-pnl-card">
           <div class="cc-hdr">
-            <div class="cc-title" data-i18n="dailyPnL">每日損益</div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <div class="cc-title" data-i18n="dailyPnL">每日損益</div>
+              <div class="daily-view-toggle">
+                <button class="dvt-btn" id="dvt-chart" onclick="setDailyView('chart')">📊 圖表</button>
+                <button class="dvt-btn active" id="dvt-cal" onclick="setDailyView('cal')">📅 日曆</button>
+              </div>
+            </div>
             <div class="cc-right">
               <div class="cc-val" id="daily-best">—</div>
               <div class="cc-sub" data-i18n="bestDay">最佳單日</div>
             </div>
           </div>
-          <div class="ch-wrap ch-daily"><canvas id="chart-daily"></canvas></div>
+          <!-- Chart view (hidden by default) -->
+          <div id="daily-chart-view" style="display:none">
+            <div class="ch-wrap ch-daily"><canvas id="chart-daily"></canvas></div>
+          </div>
+          <!-- Calendar view (shown by default) -->
+          <div id="daily-cal-view">
+            <!-- Month navigator -->
+            <div class="cal-nav">
+              <button class="cal-nav-btn" id="cal-prev" onclick="calNav(-1)">‹</button>
+              <div class="cal-nav-center">
+                <div class="cal-nav-month" id="cal-nav-label">—</div>
+                <div class="cal-nav-pnl zero" id="cal-nav-pnl">—</div>
+              </div>
+              <button class="cal-nav-btn" id="cal-next" onclick="calNav(1)">›</button>
+            </div>
+            <!-- DOW headers -->
+            <div class="cal-week-header">
+              <div class="cal-dow">Sun</div><div class="cal-dow">Mon</div><div class="cal-dow">Tue</div>
+              <div class="cal-dow">Wed</div><div class="cal-dow">Thu</div><div class="cal-dow">Fri</div>
+              <div class="cal-dow">Sat</div>
+            </div>
+            <!-- Day grid -->
+            <div class="cal-grid" id="daily-cal-content">
+              <div style="grid-column:span 7;text-align:center;padding:16px;font-family:var(--mono);font-size:11px;color:var(--text2)">載入中…</div>
+            </div>
+            <!-- Stats row -->
+            <div class="cal-stats" id="cal-stats-row">
+              <div class="cal-stat"><div class="cal-stat-lbl">交易日</div><div class="cal-stat-val" id="cst-days">—</div></div>
+              <div class="cal-stat"><div class="cal-stat-lbl">勝率</div><div class="cal-stat-val" id="cst-wr">—</div></div>
+              <div class="cal-stat"><div class="cal-stat-lbl">最佳日</div><div class="cal-stat-val pos" id="cst-best">—</div></div>
+              <div class="cal-stat"><div class="cal-stat-lbl">最差日</div><div class="cal-stat-val neg" id="cst-worst">—</div></div>
+            </div>
+            <!-- Legend -->
+            <div class="cal-legend" style="padding:4px 2px 2px">
+              <div class="cal-legend-item"><div class="cal-legend-box" style="background:rgba(0,232,122,.13);border-color:rgba(0,232,122,.28)"></div>獲利</div>
+              <div class="cal-legend-item"><div class="cal-legend-box" style="background:rgba(0,232,122,.44);border-color:rgba(0,232,122,.68)"></div>大獲利</div>
+              <div class="cal-legend-item"><div class="cal-legend-box" style="background:rgba(255,71,87,.11);border-color:rgba(255,71,87,.24)"></div>虧損</div>
+              <div class="cal-legend-item"><div class="cal-legend-box" style="background:rgba(255,71,87,.4);border-color:rgba(255,71,87,.64)"></div>大虧損</div>
+              <div class="cal-legend-item"><div class="cal-legend-box" style="background:rgba(255,255,255,.025);border-color:rgba(255,255,255,.05)"></div>無交易</div>
+            </div>
+          </div>
         </div>
 
       </div><!-- /left-col -->
@@ -4135,6 +4353,423 @@ async function takeScreenshot() {
   }
 }
 window.takeScreenshot = takeScreenshot;
+</script>
+
+<script>
+// ══════════════════════════════════════════════════
+//   📱 Mobile Screenshot — 4 key sections only
+//   (損益曲線 / 每日損益日曆 / 最新成交記錄 / 今日損益累積)
+// ══════════════════════════════════════════════════
+async function takeMobileScreenshot() {
+  const isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent) || window.innerWidth < 680;
+
+  const btn = document.getElementById('mobile-screenshot-btn');
+  btn.textContent = '⏳';
+  showToast('📱 手機截圖中…請稍候', '', 8000);
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const bgColor = isDark ? '#060810' : '#eef1f8';
+
+  // The 4 target cards (by their wrapping elements or chart-card ids)
+  const targetSelectors = [
+    // 損益曲線
+    '.chart-card:has(#eqCanvas)',
+    // 每日損益 (日曆)
+    '#daily-pnl-card',
+    // 最新成交記錄
+    '.card:has(#recent-list)',
+    // 今日損益累積
+    '.chart-card:has(#chart-today)',
+  ];
+
+  // Fallback: find by iterating since :has() may not be supported everywhere
+  function findCard(selector) {
+    try { return document.querySelector(selector); } catch(e) { return null; }
+  }
+
+  // Manual fallback lookups
+  function getTargetCards() {
+    const cards = [];
+    // 損益曲線
+    const eq = document.getElementById('eqCanvas');
+    if (eq) cards.push(eq.closest('.chart-card'));
+    // 每日損益
+    const dailyPnl = document.getElementById('daily-pnl-card');
+    if (dailyPnl) cards.push(dailyPnl);
+    // 最新成交
+    const recent = document.getElementById('recent-list');
+    if (recent) cards.push(recent.closest('.card'));
+    // 今日損益
+    const today = document.getElementById('chart-today');
+    if (today) cards.push(today.closest('.chart-card'));
+    return cards.filter(Boolean);
+  }
+
+  try {
+    const cards = getTargetCards();
+    if (!cards.length) {
+      showToast('❌ 找不到截圖區塊', 'error', 3000);
+      btn.textContent = '📱';
+      return;
+    }
+
+    // Mobile width: 390px for phone-like output, full width for desktop
+    const mobileW = isMobile ? Math.min(window.innerWidth, 420) : 420;
+    const scale = isMobile ? window.devicePixelRatio || 2 : 2;
+
+    // Capture each card separately then stack vertically
+    const canvases = [];
+    for (const card of cards) {
+      const c = await html2canvas(card, {
+        backgroundColor: bgColor,
+        scale: scale,
+        useCORS: true,
+        allowTaint: true,
+        logging: false,
+        width: mobileW,
+        windowWidth: mobileW,
+      });
+      canvases.push(c);
+    }
+
+    // Stack vertically with a small gap
+    const gap = 8 * scale;
+    const totalH = canvases.reduce((s, c) => s + c.height + gap, 0) - gap;
+    const finalW = Math.max(...canvases.map(c => c.width));
+
+    const finalCanvas = document.createElement('canvas');
+    const headerH = 56 * scale;
+    const footerH = 32 * scale;
+    finalCanvas.width = finalW;
+    finalCanvas.height = totalH + headerH + footerH + gap * 2;
+    const ctx = finalCanvas.getContext('2d');
+
+    // Background
+    ctx.fillStyle = isDark ? '#04060f' : '#eef1f8';
+    ctx.fillRect(0, 0, finalCanvas.width, finalCanvas.height);
+
+    // Header gradient band
+    const grad = ctx.createLinearGradient(0, 0, finalCanvas.width, 0);
+    grad.addColorStop(0, isDark ? '#08101e' : '#dce6ff');
+    grad.addColorStop(1, isDark ? '#0d1628' : '#e8f0ff');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, finalCanvas.width, headerH);
+
+    // Accent line under header
+    const aGrad = ctx.createLinearGradient(0, 0, finalCanvas.width, 0);
+    aGrad.addColorStop(0, 'transparent');
+    aGrad.addColorStop(0.25, '#4d8ef0');
+    aGrad.addColorStop(0.55, '#00d2ff');
+    aGrad.addColorStop(0.8, '#00e87a');
+    aGrad.addColorStop(1, 'transparent');
+    ctx.fillStyle = aGrad;
+    ctx.fillRect(0, headerH - 2 * scale, finalCanvas.width, 2 * scale);
+
+    // Logo
+    const logoSize = Math.round(22 * scale);
+    ctx.fillStyle = isDark ? '#f0f2ff' : '#0e1228';
+    ctx.font = `bold ${logoSize}px 'Bebas Neue', Arial, sans-serif`;
+    ctx.letterSpacing = `${2 * scale}px`;
+    ctx.fillText('🦔  ETHAN TRADING · 跟單策略', Math.round(18 * scale), Math.round(22 * scale));
+
+    // Subtitle
+    const subSize = Math.round(10 * scale);
+    const now = new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
+    ctx.fillStyle = isDark ? '#8892b5' : '#5a6890';
+    ctx.font = `${subSize}px 'DM Mono', monospace`;
+    ctx.letterSpacing = `${1 * scale}px`;
+    ctx.fillText('績效快照 · ' + now, Math.round(18 * scale), Math.round(40 * scale));
+
+    // Draw cards stacked
+    let y = headerH + gap;
+    for (const c of canvases) {
+      // Optional: draw a subtle separator
+      ctx.fillStyle = isDark ? 'rgba(255,255,255,.04)' : 'rgba(0,0,0,.05)';
+      ctx.fillRect(0, y - gap / 2, finalCanvas.width, gap / 2);
+      ctx.drawImage(c, 0, y);
+      y += c.height + gap;
+    }
+
+    // Footer
+    ctx.fillStyle = isDark ? 'rgba(4,6,18,.9)' : 'rgba(238,241,248,.9)';
+    ctx.fillRect(0, finalCanvas.height - footerH, finalCanvas.width, footerH);
+    ctx.fillStyle = isDark ? '#4a5478' : '#9ba8c8';
+    const fSize = Math.round(9 * scale);
+    ctx.font = `${fSize}px 'DM Mono', monospace`;
+    ctx.letterSpacing = `${0.5 * scale}px`;
+    ctx.fillText('ethan-trading.github.io  ·  損益僅供參考', Math.round(18 * scale), finalCanvas.height - Math.round(10 * scale));
+
+    // Copy to clipboard or download
+    finalCanvas.toBlob(async blob => {
+      try {
+        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+        showToast('✅ 手機截圖已複製到剪貼簿！', 'success', 2500);
+      } catch(e) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'ethan-trading-mobile.png';
+        a.click();
+        URL.revokeObjectURL(url);
+        showToast('📥 手機截圖已下載！', '', 3000);
+      }
+      btn.textContent = '📱';
+    }, 'image/png');
+
+  } catch(err) {
+    console.error('Mobile screenshot error:', err);
+    showToast('❌ 截圖失敗，請再試一次', 'error', 3000);
+    btn.textContent = '📱';
+  }
+}
+window.takeMobileScreenshot = takeMobileScreenshot;
+</script>
+
+<script>
+// ══════════════════════════════════════════════════
+//   每日損益 日曆視圖（單月導覽版）
+// ══════════════════════════════════════════════════
+(function(){
+
+  let _currentView = 'cal'; // default: calendar
+  let _dayMap = {};          // date string → row
+  let _months = [];          // sorted list of 'YYYY-MM' strings that have data
+  let _curMonthIdx = 0;      // index into _months (0 = most recent)
+  let _maxAbs = 1, _p75 = 1;
+  let _dataReady = false;
+
+  // ── Tooltip ──
+  const tt = document.createElement('div');
+  tt.className = 'cal-tooltip';
+  document.body.appendChild(tt);
+
+  // ── View toggle ──
+  window.setDailyView = function(view) {
+    _currentView = view;
+    const chartView = document.getElementById('daily-chart-view');
+    const calView   = document.getElementById('daily-cal-view');
+    const btnChart  = document.getElementById('dvt-chart');
+    const btnCal    = document.getElementById('dvt-cal');
+
+    if (view === 'chart') {
+      if (chartView) chartView.style.display = '';
+      if (calView)   calView.style.display   = 'none';
+      btnChart && btnChart.classList.add('active');
+      btnCal   && btnCal.classList.remove('active');
+    } else {
+      if (chartView) chartView.style.display = 'none';
+      if (calView)   calView.style.display   = '';
+      btnChart && btnChart.classList.remove('active');
+      btnCal   && btnCal.classList.add('active');
+      if (_dataReady) renderMonth();
+    }
+  };
+
+  // ── Month navigation ──
+  window.calNav = function(dir) {
+    const newIdx = _curMonthIdx - dir; // _months is oldest→newest, idx 0=newest
+    if (newIdx < 0 || newIdx >= _months.length) return;
+    _curMonthIdx = newIdx;
+    renderMonth();
+  };
+
+  // ── Format helpers ──
+  function fmtShort(v) {
+    // Cell display: $500.00 or -$500.00
+    if (v >= 0) return '$' + v.toFixed(2);
+    return '-$' + Math.abs(v).toFixed(2);
+  }
+  function fmtFull(v) {
+    // Full display same format
+    if (v >= 0) return '$' + v.toFixed(2);
+    return '-$' + Math.abs(v).toFixed(2);
+  }
+  function intensity(v) {
+    const abs = Math.abs(v);
+    if (abs >= _p75 * 1.5) return 'very-strong';
+    if (abs >= _p75 * 0.65) return 'strong';
+    return '';
+  }
+
+  // ── Init data ──
+  function initData() {
+    const d = window._data;
+    if (!d || !d.stats || !d.stats.DAY) return false;
+
+    const days = d.stats.DAY;
+    _dayMap = {};
+    days.forEach(r => { if (r.label) _dayMap[r.label] = r; });
+
+    const dates = Object.keys(_dayMap).sort();
+    if (!dates.length) return false;
+
+    // Build sorted unique months list (oldest first)
+    const monthSet = new Set(dates.map(d => d.slice(0, 7)));
+    _months = Array.from(monthSet).sort();
+
+    // Intensity thresholds
+    const allPnl = dates.map(ds => Math.abs(_dayMap[ds].profit || 0)).filter(v => v > 0);
+    _maxAbs = allPnl.length ? Math.max(...allPnl) : 1;
+    const sorted = allPnl.slice().sort((a, b) => a - b);
+    _p75 = sorted[Math.floor(sorted.length * 0.7)] || _maxAbs * 0.5;
+
+    // Start at most recent month
+    _curMonthIdx = 0; // index 0 = newest (_months reversed)
+
+    return true;
+  }
+
+  // ── Render current month ──
+  function renderMonth() {
+    if (!_months.length) return;
+
+    // _curMonthIdx 0 = most recent; map to actual array index
+    const realIdx = _months.length - 1 - _curMonthIdx;
+    const ym = _months[realIdx];
+    const [yr, mo] = ym.split('-').map(Number);
+
+    // Navigation button states
+    const prevBtn = document.getElementById('cal-prev');
+    const nextBtn = document.getElementById('cal-next');
+    if (prevBtn) prevBtn.disabled = (_curMonthIdx >= _months.length - 1);
+    if (nextBtn) nextBtn.disabled = (_curMonthIdx <= 0);
+
+    // Month label & total
+    const MONTH_NAMES = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+    const label = document.getElementById('cal-nav-label');
+    if (label) label.textContent = `${yr}年 ${MONTH_NAMES[mo - 1]}`;
+
+    const daysInMonth = new Date(yr, mo, 0).getDate();
+    const firstDow    = new Date(yr, mo - 1, 1).getDay(); // 0=Sun
+
+    // Collect this month's data
+    const monthDates = [];
+    for (let day = 1; day <= daysInMonth; day++) {
+      const ds = `${yr}-${String(mo).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+      if (_dayMap[ds]) monthDates.push(ds);
+    }
+
+    const monthTotal = monthDates.reduce((s, ds) => s + (_dayMap[ds].profit || 0), 0);
+    const navPnl = document.getElementById('cal-nav-pnl');
+    if (navPnl) {
+      navPnl.textContent = monthDates.length ? fmtFull(monthTotal) : '無資料';
+      navPnl.className = 'cal-nav-pnl ' + (monthTotal > 0 ? 'pos' : monthTotal < 0 ? 'neg' : 'zero');
+    }
+
+    // Build grid HTML
+    let html = '';
+
+    // Leading empty cells
+    for (let i = 0; i < firstDow; i++) {
+      html += `<div class="cal-cell empty"></div>`;
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const ds = `${yr}-${String(mo).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+      const row = _dayMap[ds];
+      const dow = new Date(yr, mo - 1, day).getDay();
+      const isWeekend = dow === 0 || dow === 6;
+
+      if (!row) {
+        if (isWeekend) {
+          html += `<div class="cal-cell weekend-empty"><span class="cal-day-num">${day}</span></div>`;
+        } else {
+          html += `<div class="cal-cell no-trade"><span class="cal-day-num" style="opacity:.45">${day}</span></div>`;
+        }
+      } else {
+        const pnl = row.profit || 0;
+        const cls = pnl >= 0 ? 'pos' : 'neg';
+        const intCls = intensity(pnl);
+        const tradeCount = row.trades || 0;
+        const tradeLabel = tradeCount === 1 ? '1 trade' : `${tradeCount} trades`;
+        html += `<div class="cal-cell ${cls} ${intCls}"
+          data-date="${ds}" data-pnl="${pnl.toFixed(2)}"
+          data-trades="${tradeCount}" data-wr="${tradeCount>0?Math.round((row.win_trades||0)/tradeCount*100):0}"
+          data-lots="${(row.total_lots||0).toFixed(2)}"
+          onmouseenter="calShowTip(event,this)" onmouseleave="calHideTip()">
+          <span class="cal-day-num">${day}</span>
+          <span class="cal-cell-pnl">${fmtShort(pnl)}</span>
+          <span class="cal-cell-trades">${tradeLabel}</span>
+        </div>`;
+      }
+    }
+
+    // Trailing empties
+    const total = firstDow + daysInMonth;
+    const trailing = (7 - (total % 7)) % 7;
+    for (let i = 0; i < trailing; i++) {
+      html += `<div class="cal-cell empty"></div>`;
+    }
+
+    const grid = document.getElementById('daily-cal-content');
+    if (grid) grid.innerHTML = html;
+
+    // Stats row
+    const winDays  = monthDates.filter(ds => (_dayMap[ds].profit || 0) > 0);
+    const lossDays = monthDates.filter(ds => (_dayMap[ds].profit || 0) < 0);
+    const wr = monthDates.length ? Math.round(winDays.length / monthDates.length * 100) : 0;
+    const bestPnl  = monthDates.length ? Math.max(...monthDates.map(ds => _dayMap[ds].profit || 0)) : 0;
+    const worstPnl = monthDates.length ? Math.min(...monthDates.map(ds => _dayMap[ds].profit || 0)) : 0;
+
+    const cstDays  = document.getElementById('cst-days');
+    const cstWr    = document.getElementById('cst-wr');
+    const cstBest  = document.getElementById('cst-best');
+    const cstWorst = document.getElementById('cst-worst');
+    if (cstDays)  cstDays.textContent  = monthDates.length ? `${monthDates.length}天` : '—';
+    if (cstWr)    { cstWr.textContent = monthDates.length ? `${wr}%` : '—'; cstWr.className = 'cal-stat-val ' + (wr >= 50 ? 'pos' : 'neg'); }
+    if (cstBest)  cstBest.textContent  = winDays.length  ? fmtFull(bestPnl)  : '—';
+    if (cstWorst) cstWorst.textContent = lossDays.length ? fmtFull(worstPnl) : '—';
+  }
+
+  // ── Tooltip ──
+  window.calShowTip = function(e, el) {
+    const pnl  = parseFloat(el.dataset.pnl);
+    const cls  = pnl >= 0 ? 'pos' : 'neg';
+    const [yr, mo, day] = el.dataset.date.split('-');
+    tt.innerHTML = `
+      <div class="cal-tt-date">${yr}年${parseInt(mo)}月${parseInt(day)}日</div>
+      <div class="cal-tt-row"><span class="cal-tt-lbl">損益</span><span class="cal-tt-val ${cls}">${fmtFull(pnl)}</span></div>
+      <div class="cal-tt-row"><span class="cal-tt-lbl">次數</span><span class="cal-tt-val">${el.dataset.trades}</span></div>
+      <div class="cal-tt-row"><span class="cal-tt-lbl">勝率</span><span class="cal-tt-val">${el.dataset.wr}%</span></div>
+      <div class="cal-tt-row"><span class="cal-tt-lbl">手數</span><span class="cal-tt-val">${el.dataset.lots}</span></div>`;
+    tt.style.display = 'block';
+    positionTip(e);
+  };
+  window.calHideTip = function() { tt.style.display = 'none'; };
+  function positionTip(e) {
+    const tw = 170, th = 115, m = 12;
+    let x = e.clientX + m, y = e.clientY + m;
+    if (x + tw > window.innerWidth)  x = e.clientX - tw - m;
+    if (y + th > window.innerHeight) y = e.clientY - th - m;
+    tt.style.left = x + 'px'; tt.style.top = y + 'px';
+  }
+  document.addEventListener('mousemove', e => { if (tt.style.display === 'block') positionTip(e); });
+
+  // ── Boot ──
+  function tryBoot() {
+    if (window._data && initData()) {
+      _dataReady = true;
+      if (_currentView === 'cal') renderMonth();
+    }
+  }
+
+  // Poll for data
+  let _poll = setInterval(() => {
+    if (window._data) { clearInterval(_poll); tryBoot(); }
+  }, 200);
+
+  // Also hook into KPI mutation (data refresh)
+  const firstKpi = document.getElementById('k-pnl');
+  if (firstKpi) {
+    new MutationObserver(() => {
+      if (window._data && initData()) {
+        _dataReady = true;
+        if (_currentView === 'cal') renderMonth();
+      }
+    }).observe(firstKpi, { childList: true, characterData: true, subtree: true });
+  }
+
+})();
 </script>
 </body>
 </html>
