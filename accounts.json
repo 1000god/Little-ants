@@ -1,0 +1,12 @@
+{
+  "accounts": [
+    {
+      "id": "trading_stats",
+      "file": "trading_stats.json",
+      "name": "黃金AI王者 Gold AI King",
+      "emoji": "👑",
+      "description": "翻倍複利行性策略",
+      "updated_at": "2026-05-29T12:34:44+00:00"
+    }
+  ]
+}
